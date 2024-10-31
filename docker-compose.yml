@@ -1,0 +1,33 @@
+services:
+  devpy39:
+    container_name: devpy39
+    build:
+      context: .
+      dockerfile: Dockerfile
+    entrypoint: /bin/bash
+    stdin_open: true 
+    tty: true
+    volumes:
+      - .:/workspace
+    network_mode: "host"  # Use host network mode
+  devpy39_llm:
+    build:
+      context: .
+      dockerfile: Dockerfile.llmrag
+    entrypoint: /bin/bash
+    stdin_open: true 
+    tty: true
+    volumes:
+      - .:/workspace
+    network_mode: "host"  # Use host network mode
+  crawler_data:
+    build:
+      context: .
+      dockerfile: Dockerfile.llmrag
+    entrypoint: /bin/bash
+    stdin_open: true 
+    tty: true
+    volumes:
+      - .:/workspace
+    network_mode: "host"  # Use host network mode
+
