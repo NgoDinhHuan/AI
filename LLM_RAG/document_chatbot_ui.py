@@ -13,7 +13,6 @@
     * Run index_documents.py to create the document index
 """
 
-# Copyright (c) 2023 Brent Benson
 #
 # This file is part of [project-name], licensed under the MIT License.
 # See the LICENSE file in this repository for details.
